@@ -293,7 +293,7 @@ class ReservationController extends Controller
             $unit = Unit::find($property);
             if ($unit) {
 
-                $reservations = Reservation::where('id', $property)
+                $reservations = Reservation::where('id_unit', $property)
                 ->orderBy('reservation_date', 'DESC')
                 ->get();
 
