@@ -260,7 +260,6 @@ class ReservationController extends Controller
 
                 if ($can) {
                     $newReservation = new Reservation();
-                    $newReservation->id = $property;
                     $newReservation->id_area = $id;
                     $newReservation->id_unit = $property;
                     $newReservation->reservation_date = $date.' '.$time;
