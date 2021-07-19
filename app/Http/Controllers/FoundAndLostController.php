@@ -28,8 +28,8 @@ class FoundAndLostController extends Controller
             $lost[$lostKey]['photo'] = asset('storage/'.$lostValue['photo']);
         }
         foreach ($recovered as $recKey => $recValue) {
-            $lost[$recKey]['datecreated'] = date('d/m/Y', strtotime($recValue['datecreated']));
-            $lost[$recKey]['photo'] = asset('storage/'.$recValue['photo']);
+            $recovered[$recKey]['datecreated'] = date('d/m/Y', strtotime($recValue['datecreated']));
+            $recovered[$recKey]['photo'] = asset('storage/'.$recValue['photo']);
         }
 
         $array['lost'] = $lost;
