@@ -14,7 +14,7 @@ use App\Http\Controllers\WallController;
 use App\Http\Controllers\WarningController;
 
 Route::get('/ping', function(){
-    return ['pong-pong-pong' => true];
+    return ['pong-pong' => true];
 });
 
 Route::get('/401', [AuthController::class, 'unauthorized'])->name('login');
