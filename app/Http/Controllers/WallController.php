@@ -21,6 +21,8 @@ class WallController extends Controller
             $walls[$wallKey]['likes'] = 0;
             $walls[$wallKey]['liked'] = false;
 
+            $walls[$wallKey]['datecreated'] = date('d/m/Y H:i', strtotime($wallValue['datecreated']));
+
             $likes = WallLike::where('id_wall', $wallValue['id'])->count();
             $walls[$wallKey]['likes'] = $likes;
 
