@@ -106,7 +106,7 @@ class ReservationController extends Controller
             ) {
                 $wd = date('w', $current);
                 if (in_array($wd, $offDays)) {
-                    $array['list'][] = date('d-m-Y', $current);
+                    $array['list'][] = date('Y-m-d', $current);
                 }
             }
 
